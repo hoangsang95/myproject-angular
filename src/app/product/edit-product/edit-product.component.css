@@ -1,0 +1,11 @@
+input.ng-invalid.ng-touched
+{
+    border: 1px solid red;
+}
+
+:host{
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 10%;
+}

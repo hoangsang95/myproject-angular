@@ -1,0 +1,19 @@
+<app-header></app-header> 
+<div class="container">
+  <div class="row">
+    <div 
+      class="col-xs-12" 
+      style="text-align: center; margin-top: 70px" 
+      @homeState
+      *ngIf="userName != null; else welcome">
+      <h3>Hello, <strong>{{ userName }}</strong></h3>
+      <h4>{{ userPhone }}</h4>
+      <img src="{{userAvatar}}" alt="" width="150" height="150">
+    </div>
+    <ng-template #welcome>
+      <div class="col-xs-12" style="text-align: center; margin-top: 70px">
+        <h1>Welcome you!</h1>
+      </div>
+    </ng-template>
+  </div>
+</div>

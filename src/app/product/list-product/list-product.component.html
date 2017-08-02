@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="search pull-right">
+        <input type="text" [(ngModel)]="filterString" placeholder="Search something">
+        <select [(ngModel)]="typeSearch">
+          <option *ngFor="let item of selectDefault" [value]="item.id">{{ item.name }}</option>
+        </select>
+      </div>
+      <br><br>
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Product Code</th>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th colspan="2"><a class="btn btn-success" routerLink="/product/new">New Product</a></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products | filterProduct:filterString:typeSearch; let i = index">
+            <td>{{ product.id }}</td>
+            <td>{{ product.product_code }}</td>
+            <td>{{ product.product_name }}</td>
+            <td>{{ getProductCategoryName(product.product_category) }}</td>
+            <td><i class="fa fa-times" aria-hidden="true" (click)="onDelete(i, product.id)"></i></td>
+            <td><i class="fa fa-pencil" aria-hidden="true" [routerLink]="['/product/edit/', i]"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

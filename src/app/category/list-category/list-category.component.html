@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Category Code</th>
+            <th>Category Name</th>
+            <th colspan="2"><a class="btn btn-success" routerLink="/category/new">New category</a></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cate of categories; let i = index">
+            <td>{{ cate.id }}</td>
+            <td>{{ cate.category_code }}</td>
+            <td>{{ cate.category_name }}</td>
+            <td><i class="fa fa-times" aria-hidden="true" (click)="onDelete(i, cate.id)"></i></td>
+            <td><i class="fa fa-pencil" aria-hidden="true" [routerLink]="['/category/edit/', i]"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

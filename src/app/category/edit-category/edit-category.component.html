@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>{{ title }}</h2>
+      <form (ngSubmit)="onSubmit()" [formGroup]="categoriesForm">
+        <div class="form-group">
+          <label id="cateCode">Category ID</label>
+          <input type="text" id="id" formControlName="id" class="form-control" readonly>
+        </div>
+        <div class="form-group">
+          <label id="cateCode">Category Code</label>
+          <input type="text" id="cateCode" formControlName="category_code" class="form-control">
+          <span class="text-danger" *ngIf="!categoriesForm.get('category_code').valid &&
+          categoriesForm.get('category_code').touched">This field is required!</span>
+        </div>
+        <div class="form-group">
+          <label id="cateName">Category Name</label>
+          <input type="text" id="cateName" formControlName="category_name" class="form-control">
+          <span class="text-danger" *ngIf="!categoriesForm.get('category_name').valid &&
+          categoriesForm.get('category_name').touched">This field is required</span>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" [disabled]="!categoriesForm.valid">Save</button>
+          <button type="button" class="btn btn-danger" (click)="onCancle()">Cancle</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

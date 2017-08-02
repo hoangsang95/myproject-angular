@@ -1,0 +1,12 @@
+i{
+    cursor: pointer;
+}
+
+
+:host{
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 10%;
+}
+

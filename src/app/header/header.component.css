@@ -1,0 +1,7 @@
+.header{
+    width: 100%;
+}
+.header a {
+    cursor: pointer;
+    width: 100%
+}

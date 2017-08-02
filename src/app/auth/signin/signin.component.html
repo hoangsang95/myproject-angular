@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row" style="margin-top: 85px">
+    <div class="login" @authState>
+      <div class="content">
+        <div class="inline">
+          <h1>Login <span>to your account</span></h1>
+          <h2>Login with</h2>
+          <ul>
+            <li><a class="fa fa-facebook" (click)="loginFacebook()"></a></li>
+            <li><a class="fa fa-twitter"></a></li>
+            <li><a class="fa fa-google" (click)="loginGoogle()"></a></li>
+          </ul>
+          <h3>or</h3>
+          <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              <input 
+                id="email" 
+                type="text" 
+                class="form-control" 
+                name="email" 
+                placeholder="Email"
+                ngModel
+                >
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+              <input 
+                id="password" 
+                type="password" 
+                class="form-control" 
+                name="password" 
+                placeholder="Password"
+                ngModel
+                >
+            </div>
+            <button class="btn btn-primary" style="width: 100%" type="submit">Login</button>
+          </form>
+          <h4>Don't have an account? <a href="#">Register now!</a></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

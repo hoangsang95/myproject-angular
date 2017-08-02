@@ -1,0 +1,158 @@
+:host{
+    display: block;
+    height: 100%;
+    background: url('../../../assets/bgbg.jpg') no-repeat;
+}
+
+.content{
+    background-color: white;
+    margin: auto;
+}
+
+.content h2{
+    font-size: 19px;
+    font-weight: 400;
+    color: #8E8E8E;
+    position: relative;
+}
+
+.content h2::before{
+    width: 20%;
+    height: 1px;
+    background: #8e8e8e;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    content: '';
+}
+
+
+.content h2:after {
+    width: 20%;
+    height: 1px;
+    background: #8e8e8e;
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    content: '';
+}
+
+.login{
+    margin-top: 50px;
+    width: 40%;
+    margin: auto;
+    text-align: center
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    display: inline-block;
+    margin: 10px;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    max-width: 33px;
+    cursor: pointer;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    width: 33px;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+    width: 33px;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+    width: 33px;
+}
+
+h3 {
+    font-size: 19px;
+    font-weight: 400;
+    color: #8E8E8E;
+    margin: 0px 0px 16px 0px;
+    position: relative;
+}
+
+h3:before {
+    width: 28%;
+    height: 1px;
+    background: #8e8e8e;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    content: '';
+}
+
+h3:after {
+    width: 28%;
+    height: 1px;
+    background: #8e8e8e;
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    content: '';
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #37588B;
+    margin: 10px 0px 35px 0px;
+}
+
+span  {
+    color: #8E8E8E;
+    font-weight: 300;
+}
+
+.inline{
+    padding: 30px 0;
+}
+
+.input-group{
+    margin-bottom: 20px;
+}
+
+form{
+    width: 70%;
+    margin: 20px auto;
+}
+
+.form-control, .input-group-addon, .btn{
+    border-radius: 0;
+}
+
+h4 {
+    font-size: 19px;
+    font-weight: 400;
+    color: #bababa;
+    margin: 15px 0px 16px 0px;
+}
+
+@media screen and (max-width: 1000px){
+    .login{
+        width: 80%
+    }
+}
